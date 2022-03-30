@@ -1,15 +1,87 @@
-version: '3.3'  # version of compose format
+version: "3.3" # version of compose format
 
 services:
   landing-service:
-    build: ./landing  # path is relative to docker-compose.yml location
+    build: ./landing # path is relative to docker-compose.yml location
     hostname: landing-service
     ports:
-      - 5050:5050  # host:container
+      - 5050:5050 # host:container
     networks:
       sample:
         aliases:
           - landing-service
   # Add more services below
+  addition:
+    build: ./addition
+    ports:
+      - 5049:5049
+    networks:
+      sample:
+        aliases:
+          - addition
+  bitwise_or:
+    build: ./bitwise_or
+    ports:
+      - 5045:5045
+    networks:
+      sample:
+        aliases:
+          - bitwise_or
+  maximum:
+    build: ./maximum
+    ports:
+      - 5044:5044
+    networks:
+      sample:
+        aliases:
+          - maximum 
+  divide:
+    build: ./divide
+    ports:
+      - 5046:5046
+    networks:
+      sample:
+        aliases:
+          - divide
+  multiply:
+    build: ./multiply
+    ports:
+      - 5047:5047
+    networks:
+      sample:
+        aliases:
+          - multiply  
+  minimum:
+    build: ./minimum
+    ports:
+      - 5043:5043
+    networks:
+      sample:
+        aliases:
+          - minimum   
+  average:
+    build: ./average
+    ports:
+      - 5042:5042
+    networks:
+      sample:
+        aliases:
+          - average  
+  exponential:
+    build: ./exponential
+    ports:
+      - 5041:5041
+    networks:
+      sample:
+        aliases:
+          - exponential 
+  minus:
+    build: ./minus
+    ports:
+      - 5048:5048
+    networks:
+      sample:
+        aliases:
+          - minus
 networks:
   sample:

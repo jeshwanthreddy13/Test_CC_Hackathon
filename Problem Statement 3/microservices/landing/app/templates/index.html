@@ -3,15 +3,20 @@
       <h1>Arithmetic Microservices</h1>
       <form action="" method="POST">
          <!-- Hint 1: What if input "first" and "second" had default values? -->
-         Enter the First number : <input name="first">
+         Enter the First number : <input type="number" name="first" value="0">
          <br>
-         Enter the Second number: <input name="second">
+         Enter the Second number: <input type="number" name="second" value="0">
          <br>
          Enter Operation: <select id="op" name="operation">
             <option value="add">Addition</option>
             <option value="minus">Subtraction</option>
             <option value="multiply">Multiplication</option>
             <option value="divide">Division</option>
+            <option value="bitwise_or">Bitwise OR</option>
+            <option value="maximum">Maximum</option>
+            <option value="minimum">Minimum</option>
+            <option value="average">Average</option>
+            <option value="exponential">Exponential</option>
           </select>
          <br><br>
          <input type="submit" name="submit_button">

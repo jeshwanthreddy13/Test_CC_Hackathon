@@ -1,4 +1,3 @@
-# syntax=docker/dockerfile:1
 # Follow Task-0 subtask-1
 FROM python:3.8-alpine
 COPY ./app/requirements.txt /app/requirements.txt
@@ -8,5 +7,4 @@ RUN apk add --update \
     && pip install -r requirements.txt \
     && rm -rf /var/cache/apk/*
 COPY ./app .
-EXPOSE 5049 5045
 CMD ["python","app.py"]
